@@ -1,0 +1,13 @@
+@import "../../vars.css";
+
+
+.userContariner{
+   border: 2px solid red;
+   display: flex;
+   flex-direction: column;
+   top: 70px
+}
+
+.mensajeP{
+   color: beige;
+}

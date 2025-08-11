@@ -1,0 +1,25 @@
+# 🖥️ Sistema de Login y Registro con JWT
+
+Aplicación web con interfaz moderna y validación de usuarios que permite registrarse, iniciar sesión y mantener la sesión activa usando **JSON Web Tokens (JWT)** guardados en **cookies**.  
+El diseño es responsive, con efectos visuales y validaciones básicas en los formularios.
+
+---
+
+## 📋 Características principales
+- Formulario de **Login** y **Registro** en un mismo popup.
+- **Diseño moderno** con glassmorphism y animaciones.
+- **Validación de campos** en el cliente (HTML y JavaScript).
+- Manejo de **cookies** para almacenar y leer el token JWT.
+- Estructura adaptable a pantallas móviles.
+
+---
+
+## 🚀 Tecnologías utilizadas
+- **React.js** (Frontend)
+- **CSS3** con variables (`vars.css`)
+- **JWT** para autenticación
+- **Cookies** para persistencia de sesión
+
+---
+
+## 📂 Estructura del proyecto

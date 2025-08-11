@@ -114,7 +114,8 @@ export const AuthProvider =({children})=>{
           singIn,
           errors,
           SetErrors,
-          isAutenticated
+          isAutenticated,
+          user
 
        }}>
         {children}

@@ -8,6 +8,7 @@ import {
   cerrarSesion,
 } from "../../api/task.js";
 
+
 function MenuUsersPage() {
   const [mensaje, setMensaje] = useState("");
   const [salida, setSalida] = useState("");
@@ -18,23 +19,42 @@ function MenuUsersPage() {
     const res = await horaDeEntradaFechaPost();
     console.log(res.data);
     setMensaje(res.data);
+     setSalida("");      
+     setHorarios([]);
   };
 
   const handleSubmitExit = async () => {
+
+     const confirmar = window.confirm(
+    "¿Está seguro de que desea marcar su hora de salida?"
+  );
+
+  if(!confirmar){
+  
+    return
+
+  }
     const res = await horaDeSalidaPost();
     console.log(res.data);
     setSalida(res.data);
+    setMensaje("");    
+  setHorarios([]); 
   };
 
   const handleHorarios = async () => {
     const res = await validarHorariosPost();
     setHorarios(res.data);
+  setMensaje("");      
+  setSalida(""); 
   };
+
+
+
 
   const handleLogout = async () => {
     const res = await cerrarSesion();
     if (res.status === 200) {
-      navigate("/"); // ← redirige al login o página de inicio
+      navigate("/"); 
     }
   };
 
@@ -51,26 +71,28 @@ function MenuUsersPage() {
 
       <button onClick={handleSubmitExit}>Registrar hora de salida</button>
       {salida && (
-        <p className={styles.mensajeP}>
+        <p className={styles.mensajeP2}>
           {salida.message} - {salida.horaSalida}
         </p>
       )}
 
       <button onClick={handleHorarios}>Consultar horarios</button>
 
-      {horarios.length > 0 && (
-        <div>
-          <h3>Horarios asignados:</h3>
-          <ul>
-            {horarios.map((horario) => (
-              <li key={horario.id} className={styles.mensajeP}>
-                {horario.dia_semana}: {horario.hora_inicio} -{" "}
-                {horario.hora_fin}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+{Array.isArray(horarios) && horarios.length > 0 && (
+  <div className={styles.mensaje4}>
+    <h3>Horarios asignados</h3>
+    <ul>
+     {horarios.map((horario, index) => {
+  if (!horario.dia_semana || !horario.hora_inicio || !horario.hora_fin) return null;
+  return (
+    <li key={horario.id || index} className={styles.mensaje5}>
+      {horario.dia_semana}: {horario.hora_inicio} - {horario.hora_fin}
+    </li>
+  );
+})}
+    </ul>
+  </div>
+)}
 
       {/* ✅ Botón de cerrar sesión */}
       <button onClick={handleLogout}>Cerrar sesión</button>

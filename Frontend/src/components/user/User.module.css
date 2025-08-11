@@ -2,12 +2,75 @@
 
 
 .userContariner{
-   border: 2px solid red;
    display: flex;
    flex-direction: column;
-   top: 70px
+   width: 100%;
+   height: auto;
+   position: fixed;
 }
 
+
+
 .mensajeP{
-   color: beige;
+   color: rgb(0, 0, 0);
+   position: absolute;
+   left: 34%;
+   border: 2px solid rgba(64, 62, 62, 0.5);
+   padding: 40px;
+   border-radius: 5px;
+
 }
+
+
+.userContariner button{
+   width: 200px;
+   height: 100px;    
+   margin-bottom: 10px;
+   margin-top: 10px;
+   margin-left: 10px;
+      background: transparent;
+   border: 2px solid rgba(64, 62, 62, 0.5);
+  font-size: small;
+  border-radius: 10px;
+}
+
+.mensajeP2{
+     color: rgb(0, 0, 0);
+   position: absolute;
+   left: 34%;
+   border: 2px solid rgba(64, 62, 62, 0.5);
+   padding: 40px;
+   border-radius: 5px;
+   bottom: 49%;
+}
+
+.mensaje4{ 
+
+position: absolute;
+left: 40%;
+ margin-top: 20px;
+  padding: 15px;
+  border: 2px solid rgba(64, 62, 62, 0.3);
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+
+} 
+
+.mensaje5{ 
+   list-style: none;
+    list-style: none;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgba(64, 62, 62, 0.2);
+  border-radius: 8px;
+  color: #222;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+} 

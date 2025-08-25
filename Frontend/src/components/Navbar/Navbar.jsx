@@ -5,6 +5,7 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { useStyles } from "../../contexts/StylesContext";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode"
+import logoPrin from "../../skill/logoPrincipalfinal.png"
 
 function NavBar() {
   const [menuOpen, SetMenuOpen] = useState(false);
@@ -35,13 +36,14 @@ function NavBar() {
     <nav>
       {usernameFromToken ? (
         <nav className={styles.navbar}>
+        <img src={logoPrin} className={styles.logoPrin}></img>
           <div className={styles.welcomeUser}>
             <p>Bienvenido  {usernameFromToken}</p>
           </div>
         </nav>
       ) : (
         <nav className={styles.navbar}>
-          <GiAbstract076 className={styles.title} />
+          <img src={logoPrin}className={styles.logoPrin}></img>
           <div className={styles.menu}>
             {menuOpen ? (
               <IoClose className={styles.menuBtn} onClick={handleMenuToggle} />
@@ -58,7 +60,7 @@ function NavBar() {
               <li><a href="#about">Acerca de</a></li>
               <li><a href="#history">Nuestra historia</a></li>
               <li><a href="#experience">Tecnología</a></li>
-              <li><a href="#contact">Contáctanos</a></li>
+              <li><a href="#contact">Política de datos</a></li>
               <button className={styles.button} onClick={HandleOpenClose}>
                 Acceder
               </button>

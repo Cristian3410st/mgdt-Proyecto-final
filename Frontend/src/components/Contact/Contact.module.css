@@ -1,78 +1,74 @@
 @import "../../vars.css";
 
-.container{
-    position: relative;
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-secondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100vw;
-    padding: 58px 10%;
-    gap: 10px;
+.container {
+  position: relative;
+  color: var(--color-text);
+  margin-top: 80px;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  padding: 50px 15%;
+  gap: 20px;
 }
 
-.text h2{
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: 4px;
+.text {
+  max-width: 900px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.text p{
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 2px;
+.text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.links{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    gap: 26px;
+.text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.link{
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.text p {
+  font-size: 15px;
+  margin-bottom: 12px;
 }
 
-.link a{
-    color: var(--color-text);
-        text-decoration: none;
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 1.5px;
+.text ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
 }
 
+.text li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
 
-@media screen and (max-width:830px) {
-    .container{
-        flex-direction: column;
-        gap: 23px;
-    }
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 15px;
+}
 
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .links{
-        align-items: center;
-    }
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-    .text h2{
-        font-size: 50px;
-        font-weight: 700;
-    }
-
-
-    .text p{
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        text-align: center;
-    }
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
 }

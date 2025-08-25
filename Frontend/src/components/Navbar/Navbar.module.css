@@ -4,9 +4,9 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-top: 61px;
   z-index: 2;
   margin: 0 10%;
+  align-items: center;
 }
 
 .title{
@@ -140,3 +140,7 @@
   margin-left: 430px;
    }
 
+.logoPrin{
+  width: 220px;
+  height: 150px;
+}

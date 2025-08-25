@@ -54,9 +54,23 @@ export const validarHorariosPost = async () => {
 export const cerrarSesion = async () => {
   const response = await fetch("http://localhost:4000/api/logout", {
     method: "DELETE",
-    credentials: "include", // importante para eliminar cookie
+    credentials: "include",
   });
 
   const data = await response.json();
   return { status: response.status, data };
+};
+
+
+export const cambioContrasena = async (data) => {
+  const response = await fetch("http://localhost:4000/api/task/cambiarContrasena", {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return response.json(); 
 };
